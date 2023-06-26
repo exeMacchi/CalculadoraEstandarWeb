@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Calculadora estándar v1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body onkeydown="presioneUnaTecla(event)">
+        <div id="calculadora">
+            <div id="cabecera">
+                <form id="form-cabecera">
+                    <div>
+                        <p>Números</p>
+                        <input id="input__numero" type="text" readonly>
+                    </div>
+                    <div>
+                        <p>Resultado</p>
+                        <input id="input__resultado" type="text" readonly>
+                    </div>
+                </form> 
+            </div>
+            <div id="cuerpo">
+                <form id="form-cuerpo">
+                    <div class="botones">
+                        <button id="potenciar" type="button" onclick="operacion(this.id)">^</button>
+                        <button id="raizcubica" type="button" onclick="operacion(this.id)">3√</button>
+                        <button id="raizcuadrada" type="button" onclick="operacion(this.id)">2√</button>
+                        <button id="dividir" type="button" onclick="operacion(this.id)">/</button>
+                        <button id="reiniciar" type="button" onclick="reiniciarCalculadora()">C</button>
+                    </div>
+                    <div class="botones">
+                        <button id="7" type="button" onclick="agregarNumero(this.id)">7</button>
+                        <button id="8" type="button" onclick="agregarNumero(this.id)">8</button>
+                        <button id="9" type="button" onclick="agregarNumero(this.id)">9</button>
+                        <button id="multiplicar" type="button" onclick="operacion(this.id)">*</button>
+                    </div>
+                    <div class="botones">
+                        <button id="4" type="button" onclick="agregarNumero(this.id)">4</button>
+                        <button id="5" type="button" onclick="agregarNumero(this.id)">5</button>
+                        <button id="6" type="button" onclick="agregarNumero(this.id)">6</button>
+                        <button id="restar" type="button" onclick="operacion(this.id)">-</button>
+                    </div>
+                    <div class="botones">
+                        <button id="1" type="button" onclick="agregarNumero(this.id)">1</button>
+                        <button id="2" type="button" onclick="agregarNumero(this.id)">2</button>
+                        <button id="3" type="button" onclick="agregarNumero(this.id)">3</button>
+                        <button id="sumar" type="button" onclick="operacion(this.id)">+</button>
+                    </div>
+                    <div class="botones">
+                        <button id="mas-menos" type="button" onclick="agregarNumero('-')">+/-</button>
+                        <button id="0" type="button" onclick="agregarNumero(this.id)">0</button>
+                        <button id="." type="button" onclick="agregarNumero(this.id)">.</button>
+                        <button id="igual" type="button" onclick="realizarOperacion(this.id)">=</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
